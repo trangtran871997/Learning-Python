@@ -1,0 +1,15 @@
+**Định nghĩa**
+- Python là một trong những ngôn ngữ lập trình được chú ý bởi tính đa dạng về ứng dụng, thư viện phong phú và cộng đồng đông đảo.
+- Python là một ngôn ngữ phiên dịch (Interpreter Language), tức là không cần build thành file thực thi mà chạy trực tiếp như PHP.
+- Python hỗ trợ hầu hết các nền tảng và hệ điều hành như Mac OS,...
+- Chỉ cần dùng một text editorlà có thể viết được code python, Aptana, PyCharm... Các IDE này sẽ hỗ trợ thêm phân tích cú pháp dòng lệnh, debug.
+
+** Chạy in ra "Hello World"
+B1: Tạo file hello.py: nano hello.py
+    Bên trong file gõ dòng lệnh: print('Hello World')
+B2: Run file .py: $ python3 hello.py
+
+
+                               CÚ PHÁP
+1.1. Biến số 
+
