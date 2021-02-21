@@ -10,10 +10,14 @@ class CustomPageNumber(pagination.PageNumberPagination):
 
     def get_paginated_response(self, data):
         page_count = math.ceil(self.page.paginator.count/self.page_size)
-        page_range = range(1, page_count + 1)
+        page_range = []
+        i = 1
+        while i <= page_count:
+            page_range.append(i)
+            i += 1
         return Response(OrderedDict([
-             ('lastPage', page_count),
-             ('countItemsOnPage', self.page_size),
+             ('last_page', page_count),
+             ('page_size', self.page_size),
              ('number', self.page.number),
              ('next', self.get_next_link()),
              ('previous', self.get_previous_link()),
@@ -23,3 +27,4 @@ class CustomPageNumber(pagination.PageNumberPagination):
              ('total', self.page.paginator.count),
              ('results', data)
          ]))
+

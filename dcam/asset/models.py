@@ -1,6 +1,7 @@
 from django.db import models
 from rest_framework.utils import json
-
+from audit_log.models.fields import LastUserField
+from audit_log.models.managers import AuditLog
 from asset.static import *
 
 
@@ -23,6 +24,7 @@ class Device(models.Model):
                               choices=STATUS_CHOICES,
                               default=STATUS_CHOICES.__getitem__(0))
     note = models.CharField(max_length=2048, blank=True)
+    audit_log = AuditLog()
 
     def __str__(self):
         return serialize_class(self)
