@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <script src="{% static '/jquery/jquery.js' %}"></script>
+    <link href="{% static 'main.css' %}" media="screen" type="text/css" rel="stylesheet" />
+	<script src="{% static 'main.js' %}"></script>
+    <style>
+	body {
+		background-image: url('/static/images/RPL-data-center-dark-w1800.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	</style>
+</head>
+<body>
+
+<h1><span>DCAM</span></h1>
+<h2><span>Data Center Asset Management</span></h2>
+
+<div class="container">
+	<div class="cover atvImg">
+		<div class="atvImg-layer" data-img="/static/images/charts.png"></div>
+	</div>
+
+	<div class="cover atvImg">
+		<div class="atvImg-layer" data-img="/static/images/ud.png"></div>
+	</div>
+
+	<div class="cover atvImg">
+		<div class="atvImg-layer" data-img="/static/images/db.png"></div>
+	</div>
+
+	<div class="cover atvImg">
+		<div class="atvImg-layer" data-img="/static/images/api.png"></div>
+	</div>
+</div>
+
+<h4>Powered by Dat Le</h4>
+
+</body>
+</html>
