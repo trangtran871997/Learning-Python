@@ -29,12 +29,11 @@ class Device(models.Model):
 
 
 class DjLogAdmin(models.Model):
-	date = models.DateField(null=False)
-	device_id = models.CharField(max_length=50)
+	object_id = models.CharField(max_length=50)
 	content = models.TextField(null=False, blank=False)
 
-	def __unicode__(self):
-		return '%s error: %s' % (self.device_id, self.content)
+	def __str__(self):
+		return self.object_id
 
 class Management(models.Model):
     device_id = models.ForeignKey(Device, on_delete=models.CASCADE, related_name='management',)
