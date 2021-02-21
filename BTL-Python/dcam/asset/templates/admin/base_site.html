@@ -1,0 +1,27 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'DCAM' %}{% endblock %}
+
+{% block extrastyle %}
+<style type="text/css">
+body.login {
+    background-image: url('/static/images/D538_247_145_0004_600.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+body.login .submit-row input {
+    background-color: #323C50;
+}
+#header {
+    background-color: #323C50;
+}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Data Center Asset Management' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

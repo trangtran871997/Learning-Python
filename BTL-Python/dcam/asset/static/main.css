@@ -1,0 +1,139 @@
+body {
+	background : #99aeff;
+	font-weight: 500;
+    line-height: 1.42em;
+    color: white;
+    background-color:#1F2739;
+}
+
+.container {
+	width : 940px;
+	height: 720px;
+	position: absolute;
+    text-align: left;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+}
+
+.cover {
+    display: inline-block;
+    height: 300px;
+	width: 400px;
+	margin: 30px;
+	border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		width : 100%;
+		position: relative;
+		transform: translate(0%, 0%);
+		top: 0;
+		left: 0;
+	}
+	.cover {
+		display: block;
+		height: 200px;
+		width: 320px;
+		margin: 15px auto;
+	}
+}
+
+.atvImg {
+	border-radius: 8px;
+	transform-style: preserve-3d;
+	-webkit-tap-highlight-color: rgba(#000,0);
+}
+
+.atvImg img {
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+}
+
+.atvImg-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	transition: all 0.2s ease-out;
+}
+
+.atvImg-container.over .atvImg-shadow {
+	box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+}
+
+.atvImg-layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	transform-style: preserve-3d;
+}
+
+.atvImg-rendered-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: cover;
+	transition: all 0.1s ease-out;
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.atvImg-shadow {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	transition: all 0.2s ease-out;
+	box-shadow: 0 8px 30px rgba(14,21,47,0.6);
+}
+
+.atvImg-shine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 8px;
+	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
+}
+
+h1 {
+    font-size:3em;
+    font-weight: bold;
+    line-height:1em;
+    text-align: left;
+    color: #4DC3FA;
+    padding-top: 0.3em;
+    padding-left: 0.4em;
+}
+
+h2 {
+    font-size:1em;
+    font-weight: 800;
+    text-align: left;
+    line-height:1em;
+    padding-bottom: 0em;
+    color: yellow;
+    padding-left: 1em;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 800;
+    color: yellow;
+    text-align: center;
+    padding-top: 42em;
+    padding-bottom: 2em;
+}
+

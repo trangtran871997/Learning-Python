@@ -1,0 +1,175 @@
+/*
+	Customized from: https://github.com/pablorgarcia
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.42em;
+    color: white;
+    background-color:#1F2739;
+}
+
+h1 {
+    font-size:3em;
+    font-weight: bold;
+    line-height:1em;
+    text-align: left;
+    color: #4DC3FA;
+    padding-top: 0.3em;
+    padding-left: 0.4em;
+}
+
+h2 {
+    font-size:1em;
+    font-weight: 800;
+    text-align: left;
+    line-height:1em;
+    padding-bottom: 0em;
+    color: yellow;
+    padding-left: 1em;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 900;
+    text-align: right;
+}
+
+h3 mark {
+    background-color: #2C3446;
+    color: white;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 800;
+    color: yellow;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 0 0;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+    word-wrap: normal;
+    -webkit-box-shadow: 0 1px 1px -1px #0E1119;
+    -moz-box-shadow: 0 1px 1px -1px #0E1119;
+    box-shadow: 0 1px 1px -1px #0E1119;
+}
+
+.container td, .container th {
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.container th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #999FFF;
+    padding-right: 1em;
+    margin-bottom: -5px;
+}
+
+.container th input[type=text] {
+    width: 70%;
+    margin-top: -5px;
+}
+
+.container td:first-child {
+    color: #FB667A;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container tr:hover {
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+/*.container td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}*/
+
+@media (max-width: 800px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) {
+        display: none;
+    }
+}
+
+.page-item.active .page-link {
+    border-color: #FB667A;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.page-link {
+    color: #FB667A;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.page-item:first-child .page-link {
+    background-color: #1F2739;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.page-item:not(:first-child) .page-link {
+    background-color: #1F2739;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+div {
+	width: inherit;
+}
+div.cell {
+  	word-wrap: normal;
+  	padding-left: 0.4em;
+}
+
+.container .count_in_page {
+	float: left;
+}
+.container .total {
+	float: right;
+}

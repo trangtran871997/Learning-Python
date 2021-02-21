@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>DCAM</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="table, responsive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="{% static '/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static 'index.css' %}" media="screen" type="text/css" rel="stylesheet" />
+	<script src="{% static '/jquery/jquery.js' %}"></script>
+	<script src="{% static 'index.js' %}"></script>
+	<style>
+	body {
+		background-image: url('/static/images/GettyImages-1208019958.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	</style>
+</head>
+
+<body>
+
+<h1><span>DCAM</span></h1>
+<h2><span>Data Center Asset Management</span></h2>
+
+<div class="container" id="main_pagination">
+	<ul id="pages" class="pagination justify-content-end" style="margin:20px 0">
+<!--		{% with pages=data %}
+		{% if pages.previous %}
+		<li class="page-item"><a class="page-link" href="?page={{ pages.previous_page_number }}">Prev</a></li>
+		{% else %}
+		<li class="page-item disabled"><a class="page-link">Prev</a></li>
+		{% endif %}
+		{% for i in pages.page_range %}
+			{% if pages.number == i %}
+		<li class="page-item active"><a class="page-link">{{ i }}</a></li>
+			{% else %}
+		<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+			{% endif %}
+		{% endfor %}
+		{% if pages.next %}
+		<li class="page-item"><a class="page-link" href="?page={{ pages.next_page_number }}">Next</a></li>
+		{% else %}
+		<li class="page-item disabled"><a class="page-link">Next</a></li>
+		{% endif %}
+		{% endwith %}-->
+	</ul>
+</div>
+
+<table id="main_table" class="container">
+	<thead>
+		<tr>
+			<th><h1>Device ID</h1></th>
+			<th><h1>Name</h1></th>
+			<th><h1>Description</h1></th>
+			<th><h1>Quantity</h1></th>
+			<th><h1>Status</h1></th>
+			<th><h1>License</h1></th>
+			<th><h1>Management</h1></th>
+			<th><h1>Note</h1></th>
+		</tr>
+		<tr>
+			<th><input type="text" id="device_filter" placeholder="Search..."></th>
+			<th><input type="text" id="name_filter" placeholder="Search..."></th>
+			<th><input type="text" id="desc_filter" placeholder="Search..."></th>
+			<th><input type="text" id="quantity_filter" hidden="true"></th>
+			<th><input type="text" id="status_filter" placeholder="Search..."></th>
+			<th><input type="text" id="license_filter" hidden="true"></th>
+			<th><input type="text" id="manage_filter" hidden="true"></th>
+			<th><input type="text" id="note_filter" placeholder="Search..."></th>
+		</tr>
+	</thead>
+	<tbody id="recordrows">
+<!--	{% with records=data.results %}
+	{% if records %}
+		{% for row in records %}
+		<tr>
+			<td><div class="cell">{{ row.device_id }}</div></td>
+			<td><div class="cell">{{ row.name }}</div></td>
+			<td><div class="cell">{{ row.description }}</div></td>
+			<td><div class="cell">{{ row.quantity }}</div></td>
+			<td><div class="cell">{{ row.status }}</div></td>
+			<td><div class="cell">{{ row.license.0 }}</div></td>
+			<td><div class="cell">{{ row.management.0 }}</div></td>
+			<td><div class="cell">{{ row.note }}</div></td>
+		</tr>
+		{% endfor %}
+    {% endif %}
+	{% endwith %}-->
+	</tbody>
+</table>
+
+<h4>Powered by Dat Le</h4>
+
+</body>
+
+</html>
