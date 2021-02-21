@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from asset.models import Device
+from asset.models import Device, Change
 
 
 class DeviceSerializer(serializers.HyperlinkedModelSerializer):
@@ -9,3 +9,9 @@ class DeviceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Device
         fields = ['device_id', 'name', 'description', 'quantity', 'status', 'note', 'license', 'management']
+
+
+class ChangeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Change
+        fields = ("device_id", "changed_field", "change_data", "change_at")

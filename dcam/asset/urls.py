@@ -9,4 +9,5 @@ router.register(r'devices', views.DeviceViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path(r'changes/', views.get_changes)
 ]

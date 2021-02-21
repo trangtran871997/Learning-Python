@@ -1,8 +1,10 @@
+import datetime
 from django.db import models
 from rest_framework.utils import json
-from audit_log.models.fields import LastUserField
-from audit_log.models.managers import AuditLog
+from simple_history.models import HistoricalRecords
+from django.utils import timezone
 from asset.static import *
+#from auditlog.registry import auditlog
 
 
 def serialize_class(obj):
@@ -24,7 +26,17 @@ class Device(models.Model):
                               choices=STATUS_CHOICES,
                               default=STATUS_CHOICES.__getitem__(0))
     note = models.CharField(max_length=2048, blank=True)
-    audit_log = AuditLog()
+
+    def __str__(self):
+        return serialize_class(self)
+
+
+class Change(models.Model):
+    device_id = models.ForeignKey(Device, on_delete=models.CASCADE, related_name='asset_device', )
+    changed_field = models.CharField("field_name")
+    changed_data = models.TextField()  # you can improve this by storing the data in compressed format
+    changed_at = models.DateTimeField(default=timezone.now)
+    history = HistoricalRecords()
 
     def __str__(self):
         return serialize_class(self)
